@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\IngredienteCollection;
 use App\Models\Ingrediente;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,7 @@ class IngredienteController extends Controller
      */
     public function index()
     {
-        //
+        return new IngredienteCollection(Ingrediente::where('disponible', 1)->orderBy('categoria_id', 'DESC')->get());
     }
 
     /**
@@ -36,7 +37,11 @@ class IngredienteController extends Controller
      */
     public function update(Request $request, Ingrediente $ingrediente)
     {
-        //
+        $ingrediente->estado = 1;
+        $ingrediente->save();
+        return [
+            'ingrediente' => $ingrediente
+        ];
     }
 
     /**

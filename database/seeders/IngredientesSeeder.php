@@ -17,6 +17,7 @@ class IngredientesSeeder extends Seeder
         $datos = [
             array(
                 'nombre' =>  "Pan de hamburguesa Casero",
+                'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -24,6 +25,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Carne de Ternera Wagyu",
+                'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -31,6 +33,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Queso cheddar",
+                'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -38,6 +41,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Lechuga",
+                'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -45,6 +49,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Tomate",
+                'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -52,6 +57,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Cebolla morada",
+                'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -59,6 +65,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Pepinillos",
+                'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -66,6 +73,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Beicon",
+                'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -73,6 +81,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Huevo",
+                'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -80,6 +89,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Salsa BBQ",
+                'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -87,6 +97,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Salsa Fresh",
+                'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -94,6 +105,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Mayonesa",
+                'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -101,6 +113,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Mostaza",
+                'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -108,6 +121,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Pepperoni",
+                'precio' => 1,
                 'categoria_id' => 3,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -115,6 +129,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Jamón Serrano",
+                'precio' => 1,
                 'categoria_id' => 3,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -122,6 +137,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Bacon",
+                'precio' => 1,
                 'categoria_id' => 3,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -129,6 +145,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Salchicha italiana",
+                'precio' => 1,
                 'categoria_id' => 3,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -136,6 +153,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Pollo a la parrilla",
+                'precio' => 1,
                 'categoria_id' => 3,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -143,6 +161,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Champiñones",
+                'precio' => 1,
                 'categoria_id' => 3,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -150,6 +169,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Queso de cabra",
+                'precio' => 1,
                 'categoria_id' => 3,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -157,6 +177,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Nata",
+                'precio' => 1,
                 'categoria_id' => 3,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
@@ -164,6 +185,7 @@ class IngredientesSeeder extends Seeder
             ),
             array(
                 'nombre' =>  "Huevo",
+                'precio' => 1,
                 'categoria_id' => 3,
                 'disponible' => true,
                 'created_at' => Carbon::now(),
