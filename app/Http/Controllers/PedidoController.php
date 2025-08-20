@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\PedidoCollection;
-use App\Models\Pedido;
-use App\Models\PedidoProducto;
 use Carbon\Carbon;
+use App\Models\PedidoExtra;
+use App\Models\Pedido;
+use Carbon\Traits\ToStringFormat;
 use Illuminate\Http\Request;
+use App\Models\PedidoProducto;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Resources\PedidoCollection;
+
+use function PHPSTORM_META\map;
 
 class PedidoController extends Controller
 {
@@ -24,10 +28,12 @@ class PedidoController extends Controller
      */
     public function store(Request $request)
     {
+
         //Almacenar pedidos
         $pedido = new Pedido;
         $pedido->user_id = Auth::user()->id;
         $pedido->total = $request->total;
+        $pedido->extras_total = $request->extras_total;
         $pedido->save();
 
         //Obtener el ID del Pedido
@@ -35,20 +41,37 @@ class PedidoController extends Controller
         //Obtener los productos del pedido
         $productos = $request->productos;
 
+
         //Formatear el arreglo
         $pedido_producto = [];
+        $pedido_extras = [];
 
         foreach ($productos as $producto) {
+            $producto_id = $producto['id'];
+            $extras = $producto['extras'];
             $pedido_producto[] = [
                 'pedido_id' => $id,
                 'producto_id' => $producto['id'],
                 'cantidad' => $producto['cantidad'],
+                'extras' => json_encode($extras),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ];
+        }
+
+        foreach ($extras as $extra) {
+            $pedido_extras[] = [
+                'nombre' => $extra['nombre'],
+                'producto_id' => $producto_id,
+                'pedido_id' => $id,
+                'extra_id' => $extra['id'],
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ];
         }
         //Guardar en la BD
         PedidoProducto::insert($pedido_producto);
+        PedidoExtra::insert($pedido_extras);
 
         return [
             'message' => 'Pedido realizado, estará listo en unos minutos, gracias',

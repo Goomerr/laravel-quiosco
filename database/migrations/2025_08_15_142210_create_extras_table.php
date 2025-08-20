@@ -17,7 +17,6 @@ return new class extends Migration
             $table->double('precio');
             $table->boolean('disponible')->default(1);
             $table->foreignId('categoria_id')->constrained()->onDelete('cascade');
-            $table->foreignId('ingrediente_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

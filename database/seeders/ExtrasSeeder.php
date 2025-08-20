@@ -3,11 +3,11 @@
 namespace Database\Seeders;
 
 use Carbon\Carbon;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Support\Facades\DB;
 
-class IngredientesSeeder extends Seeder
+class ExtrasSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,7 +16,7 @@ class IngredientesSeeder extends Seeder
     {
         $datos = [
             array(
-                'nombre' =>  "Pan de hamburguesa Casero",
+                'nombre' => "Pan de hamburguesa Casero",
                 'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
@@ -24,7 +24,7 @@ class IngredientesSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ),
             array(
-                'nombre' =>  "Carne de Ternera Wagyu",
+                'nombre' => "Carne de Ternera Wagyu",
                 'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
@@ -32,7 +32,7 @@ class IngredientesSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ),
             array(
-                'nombre' =>  "Queso cheddar",
+                'nombre' => "Queso cheddar",
                 'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
@@ -40,7 +40,7 @@ class IngredientesSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ),
             array(
-                'nombre' =>  "Lechuga",
+                'nombre' => "Lechuga",
                 'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
@@ -48,7 +48,7 @@ class IngredientesSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ),
             array(
-                'nombre' =>  "Tomate",
+                'nombre' => "Tomate",
                 'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
@@ -56,7 +56,7 @@ class IngredientesSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ),
             array(
-                'nombre' =>  "Cebolla morada",
+                'nombre' => "Cebolla morada",
                 'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
@@ -64,7 +64,7 @@ class IngredientesSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ),
             array(
-                'nombre' =>  "Pepinillos",
+                'nombre' => "Pepinillos",
                 'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
@@ -72,7 +72,7 @@ class IngredientesSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ),
             array(
-                'nombre' =>  "Beicon",
+                'nombre' => "Beicon",
                 'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
@@ -80,7 +80,7 @@ class IngredientesSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ),
             array(
-                'nombre' =>  "Huevo",
+                'nombre' => "Huevo",
                 'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
@@ -88,7 +88,7 @@ class IngredientesSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ),
             array(
-                'nombre' =>  "Salsa BBQ",
+                'nombre' => "Salsa BBQ",
                 'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
@@ -96,7 +96,7 @@ class IngredientesSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ),
             array(
-                'nombre' =>  "Salsa Fresh",
+                'nombre' => "Salsa Fresh",
                 'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
@@ -104,7 +104,7 @@ class IngredientesSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ),
             array(
-                'nombre' =>  "Mayonesa",
+                'nombre' => "Mayonesa",
                 'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
@@ -112,7 +112,7 @@ class IngredientesSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ),
             array(
-                'nombre' =>  "Mostaza",
+                'nombre' => "Mostaza",
                 'precio' => 1,
                 'categoria_id' => 2,
                 'disponible' => true,
@@ -193,7 +193,6 @@ class IngredientesSeeder extends Seeder
             ),
 
         ];
-
-        DB::table('ingredientes')->insert($datos);
+        DB::table('extras')->insert(($datos));
     }
 }

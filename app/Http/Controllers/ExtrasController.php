@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Carbon\Carbon;
 use App\Models\Extra;
-use App\Models\Ingrediente;
 use Illuminate\Http\Request;
 use App\Http\Resources\ExtrasCollection;
-use Laravel\Pail\ValueObjects\Origin\Console;
+
 
 class ExtrasController extends Controller
 {
@@ -33,35 +31,35 @@ class ExtrasController extends Controller
     public function store(Request $request)
     {
 
-        //Almacenar pedidos
-        $extra = new Extra;
-        $extra->save();
-        //Obtener el ID del extra
-        $id = $extra->id;
-        //Obtener los productos del extra
-        $extras_pedido = $request->extras;
+        // //Almacenar pedidos
+        // $extra = new Extra;
+        // $extra->save();
+        // //Obtener el ID del extra
+        // $id = $extra->id;
+        // //Obtener los productos del extra
+        // $extras_pedido = $request->extras;
 
-        //Formatear el arreglo
-        $extras = [];
+        // //Formatear el arreglo
+        // $extras = [];
 
-        foreach ($extras_pedido as $extra_pedido) {
-            $extras[] = [
-                'extra_id' => $id,
-                'nombre' => $extra_pedido['nombre'],
-                'categoria_id' => $extra_pedido['categoria_id'],
-                'ingrediente_id' => $extra_pedido['ingrediente_id'],
-                'precio' => $extra_pedido['precio'],
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ];
-        }
-        //Guardar en la BD
-        Extra::insert($extras);
+        // foreach ($extras_pedido as $extra_pedido) {
+        //     $extras[] = [
+        //         'extra_id' => $id,
+        //         'nombre' => $extra_pedido['nombre'],
+        //         'categoria_id' => $extra_pedido['categoria_id'],
+        //         'ingrediente_id' => $extra_pedido['ingrediente_id'],
+        //         'precio' => $extra_pedido['precio'],
+        //         'created_at' => Carbon::now(),
+        //         'updated_at' => Carbon::now(),
+        //     ];
+        // }
+        // //Guardar en la BD
+        // Extra::insert($extras);
 
-        return [
-            'message' => 'Extras Añadidos',
+        // return [
+        //     'message' => 'Extras Añadidos',
 
-        ];
+        // ];
     }
 
     /**
@@ -83,9 +81,14 @@ class ExtrasController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Extra $extra)
     {
-        //
+        $extra->disponible = 0;
+        $extra->save();
+
+        return [
+            'extra' => $extra
+        ];
     }
 
     /**
