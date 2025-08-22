@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->foreignId('pedido_id')->constrained()->onDelete('cascade');
             $table->foreignId('producto_id')->constrained()->onDelete('cascade');
+            $table->foreignId('extra_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
